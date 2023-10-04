@@ -1,8 +1,8 @@
 {
   "Version": 1,
-  "Hash": "TF7lScOk8Don6jmphV2A2snFtLrFJmTOmGHhFlh3v5g=",
-  "Source": "VkApi",
-  "BasePath": "_content/VkApi",
+  "Hash": "a86NGp7UVG6Xt30P0EAKnGbFAreWQRifBdKviaYnmmQ=",
+  "Source": "Vk.Api",
+  "BasePath": "_content/Vk.Api",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],

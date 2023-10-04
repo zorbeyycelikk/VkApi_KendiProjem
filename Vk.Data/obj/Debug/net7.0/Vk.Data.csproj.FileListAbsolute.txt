@@ -1,0 +1,17 @@
+/Users/zorbeycelik/Documents/Patika.Dev/VkApi_KendiProjem/Vk.Data/bin/Debug/net7.0/Vk.Data.deps.json
+/Users/zorbeycelik/Documents/Patika.Dev/VkApi_KendiProjem/Vk.Data/bin/Debug/net7.0/Vk.Data.runtimeconfig.json
+/Users/zorbeycelik/Documents/Patika.Dev/VkApi_KendiProjem/Vk.Data/bin/Debug/net7.0/Vk.Data.dll
+/Users/zorbeycelik/Documents/Patika.Dev/VkApi_KendiProjem/Vk.Data/bin/Debug/net7.0/Vk.Data.pdb
+/Users/zorbeycelik/Documents/Patika.Dev/VkApi_KendiProjem/Vk.Data/bin/Debug/net7.0/Vk.Base.dll
+/Users/zorbeycelik/Documents/Patika.Dev/VkApi_KendiProjem/Vk.Data/bin/Debug/net7.0/Vk.Base.pdb
+/Users/zorbeycelik/Documents/Patika.Dev/VkApi_KendiProjem/Vk.Data/obj/Debug/net7.0/Vk.Data.csproj.AssemblyReference.cache
+/Users/zorbeycelik/Documents/Patika.Dev/VkApi_KendiProjem/Vk.Data/obj/Debug/net7.0/Vk.Data.GeneratedMSBuildEditorConfig.editorconfig
+/Users/zorbeycelik/Documents/Patika.Dev/VkApi_KendiProjem/Vk.Data/obj/Debug/net7.0/Vk.Data.AssemblyInfoInputs.cache
+/Users/zorbeycelik/Documents/Patika.Dev/VkApi_KendiProjem/Vk.Data/obj/Debug/net7.0/Vk.Data.AssemblyInfo.cs
+/Users/zorbeycelik/Documents/Patika.Dev/VkApi_KendiProjem/Vk.Data/obj/Debug/net7.0/Vk.Data.csproj.CoreCompileInputs.cache
+/Users/zorbeycelik/Documents/Patika.Dev/VkApi_KendiProjem/Vk.Data/obj/Debug/net7.0/Vk.Data.csproj.CopyComplete
+/Users/zorbeycelik/Documents/Patika.Dev/VkApi_KendiProjem/Vk.Data/obj/Debug/net7.0/Vk.Data.dll
+/Users/zorbeycelik/Documents/Patika.Dev/VkApi_KendiProjem/Vk.Data/obj/Debug/net7.0/refint/Vk.Data.dll
+/Users/zorbeycelik/Documents/Patika.Dev/VkApi_KendiProjem/Vk.Data/obj/Debug/net7.0/Vk.Data.pdb
+/Users/zorbeycelik/Documents/Patika.Dev/VkApi_KendiProjem/Vk.Data/obj/Debug/net7.0/Vk.Data.genruntimeconfig.cache
+/Users/zorbeycelik/Documents/Patika.Dev/VkApi_KendiProjem/Vk.Data/obj/Debug/net7.0/ref/Vk.Data.dll

@@ -16,4 +16,8 @@
       <Folder Include="Controllers\" />
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\Vk.Data\Vk.Data.csproj" />
+    </ItemGroup>
+
 </Project>
