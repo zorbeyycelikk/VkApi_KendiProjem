@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "iiCHKQI22lL1gCkZKD45Eh/jaqs3teZmToYV5KcIXqdOfi1UKWvTpdTlYtAqdYYEF5pidBB6NbZZoM1NDHjxxg==",
+  "dgSpecHash": "i2xqhA/lRASh7cvvlSW441RsmIubZe9jxhAz4I+iOhbTJN02+z+n3tHZwgNxADe8Ivt0hBXHOLq0NT4zyuYNfw==",
   "success": true,
-  "projectFilePath": "/Users/zorbeycelik/Documents/Patika.Dev/VkApi_KendiProjem/VkApi/VkApi.csproj",
+  "projectFilePath": "/Users/zorbeycelik/Documents/Patika.Dev/VkApi_KendiProjem/Vk.Api/Vk.Api.csproj",
   "expectedPackageFiles": [
     "/Users/zorbeycelik/.nuget/packages/microsoft.aspnetcore.openapi/7.0.10/microsoft.aspnetcore.openapi.7.0.10.nupkg.sha512",
     "/Users/zorbeycelik/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",

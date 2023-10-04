@@ -474,11 +474,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/zorbeycelik/Documents/Patika.Dev/VkApi_KendiProjem/VkApi/VkApi.csproj",
-      "projectName": "VkApi",
-      "projectPath": "/Users/zorbeycelik/Documents/Patika.Dev/VkApi_KendiProjem/VkApi/VkApi.csproj",
+      "projectUniqueName": "/Users/zorbeycelik/Documents/Patika.Dev/VkApi_KendiProjem/Vk.Api/Vk.Api.csproj",
+      "projectName": "Vk.Api",
+      "projectPath": "/Users/zorbeycelik/Documents/Patika.Dev/VkApi_KendiProjem/Vk.Api/Vk.Api.csproj",
       "packagesPath": "/Users/zorbeycelik/.nuget/packages/",
-      "outputPath": "/Users/zorbeycelik/Documents/Patika.Dev/VkApi_KendiProjem/VkApi/obj/",
+      "outputPath": "/Users/zorbeycelik/Documents/Patika.Dev/VkApi_KendiProjem/Vk.Api/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/zorbeycelik/.nuget/NuGet/NuGet.Config"
