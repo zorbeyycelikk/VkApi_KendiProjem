@@ -12,7 +12,7 @@ using Vk.Data.Context;
 namespace Vk.Data.Migrations
 {
     [DbContext(typeof(VkDbContext))]
-    [Migration("20231004152434_Initial")]
+    [Migration("20231004154013_Initial")]
     partial class Initial
     {
         /// <inheritdoc />

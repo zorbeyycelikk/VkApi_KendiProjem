@@ -5,9 +5,12 @@
       <map>
         <entry key="Common:buildConfiguration" value="Debug" />
         <entry key="Common:dc90cdf5-bef1-4f0d-b221-d58b0ef84afb:dbContext" value="Vk.Data.Context.VkDbContext" />
+        <entry key="Common:idempotent" value="false" />
         <entry key="Common:noBuild" value="false" />
+        <entry key="Common:noTransactions" value="false" />
+        <entry key="Common:outputFilePath" value="script.sql" />
         <entry key="Common:outputFolder" value="Migrations" />
-        <entry key="Common:useDefaultConnection" value="false" />
+        <entry key="Common:useDefaultConnection" value="true" />
       </map>
     </option>
   </component>
