@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/zorbeycelik/Documents/Patika.Dev/VkApi_KendiProjem/Vk.Api/Vk.Api.csproj": {}
+    "/Users/zorbeycelik/Documents/Patika.Dev/VkApi/Vk.Api/Vk.Api.csproj": {}
   },
   "projects": {
-    "/Users/zorbeycelik/Documents/Patika.Dev/VkApi_KendiProjem/Vk.Api/Vk.Api.csproj": {
+    "/Users/zorbeycelik/Documents/Patika.Dev/VkApi/Vk.Api/Vk.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/zorbeycelik/Documents/Patika.Dev/VkApi_KendiProjem/Vk.Api/Vk.Api.csproj",
+        "projectUniqueName": "/Users/zorbeycelik/Documents/Patika.Dev/VkApi/Vk.Api/Vk.Api.csproj",
         "projectName": "Vk.Api",
-        "projectPath": "/Users/zorbeycelik/Documents/Patika.Dev/VkApi_KendiProjem/Vk.Api/Vk.Api.csproj",
+        "projectPath": "/Users/zorbeycelik/Documents/Patika.Dev/VkApi/Vk.Api/Vk.Api.csproj",
         "packagesPath": "/Users/zorbeycelik/.nuget/packages/",
-        "outputPath": "/Users/zorbeycelik/Documents/Patika.Dev/VkApi_KendiProjem/Vk.Api/obj/",
+        "outputPath": "/Users/zorbeycelik/Documents/Patika.Dev/VkApi/Vk.Api/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/zorbeycelik/.nuget/NuGet/NuGet.Config"
@@ -26,8 +26,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "/Users/zorbeycelik/Documents/Patika.Dev/VkApi_KendiProjem/Vk.Data/Vk.Data.csproj": {
-                "projectPath": "/Users/zorbeycelik/Documents/Patika.Dev/VkApi_KendiProjem/Vk.Data/Vk.Data.csproj"
+              "/Users/zorbeycelik/Documents/Patika.Dev/VkApi/Vk.Data/Vk.Data.csproj": {
+                "projectPath": "/Users/zorbeycelik/Documents/Patika.Dev/VkApi/Vk.Data/Vk.Data.csproj"
               }
             }
           }
@@ -43,6 +43,10 @@
           "targetAlias": "net7.0",
           "dependencies": {
             "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[7.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
               "target": "Package",
               "version": "[7.0.10, )"
             },
@@ -74,14 +78,14 @@
         }
       }
     },
-    "/Users/zorbeycelik/Documents/Patika.Dev/VkApi_KendiProjem/Vk.Base/Vk.Base.csproj": {
+    "/Users/zorbeycelik/Documents/Patika.Dev/VkApi/Vk.Base/Vk.Base.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/zorbeycelik/Documents/Patika.Dev/VkApi_KendiProjem/Vk.Base/Vk.Base.csproj",
+        "projectUniqueName": "/Users/zorbeycelik/Documents/Patika.Dev/VkApi/Vk.Base/Vk.Base.csproj",
         "projectName": "Vk.Base",
-        "projectPath": "/Users/zorbeycelik/Documents/Patika.Dev/VkApi_KendiProjem/Vk.Base/Vk.Base.csproj",
+        "projectPath": "/Users/zorbeycelik/Documents/Patika.Dev/VkApi/Vk.Base/Vk.Base.csproj",
         "packagesPath": "/Users/zorbeycelik/.nuget/packages/",
-        "outputPath": "/Users/zorbeycelik/Documents/Patika.Dev/VkApi_KendiProjem/Vk.Base/obj/",
+        "outputPath": "/Users/zorbeycelik/Documents/Patika.Dev/VkApi/Vk.Base/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/zorbeycelik/.nuget/NuGet/NuGet.Config"
@@ -127,14 +131,14 @@
         }
       }
     },
-    "/Users/zorbeycelik/Documents/Patika.Dev/VkApi_KendiProjem/Vk.Data/Vk.Data.csproj": {
+    "/Users/zorbeycelik/Documents/Patika.Dev/VkApi/Vk.Data/Vk.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/zorbeycelik/Documents/Patika.Dev/VkApi_KendiProjem/Vk.Data/Vk.Data.csproj",
+        "projectUniqueName": "/Users/zorbeycelik/Documents/Patika.Dev/VkApi/Vk.Data/Vk.Data.csproj",
         "projectName": "Vk.Data",
-        "projectPath": "/Users/zorbeycelik/Documents/Patika.Dev/VkApi_KendiProjem/Vk.Data/Vk.Data.csproj",
+        "projectPath": "/Users/zorbeycelik/Documents/Patika.Dev/VkApi/Vk.Data/Vk.Data.csproj",
         "packagesPath": "/Users/zorbeycelik/.nuget/packages/",
-        "outputPath": "/Users/zorbeycelik/Documents/Patika.Dev/VkApi_KendiProjem/Vk.Data/obj/",
+        "outputPath": "/Users/zorbeycelik/Documents/Patika.Dev/VkApi/Vk.Data/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/zorbeycelik/.nuget/NuGet/NuGet.Config"
@@ -149,8 +153,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "/Users/zorbeycelik/Documents/Patika.Dev/VkApi_KendiProjem/Vk.Base/Vk.Base.csproj": {
-                "projectPath": "/Users/zorbeycelik/Documents/Patika.Dev/VkApi_KendiProjem/Vk.Base/Vk.Base.csproj"
+              "/Users/zorbeycelik/Documents/Patika.Dev/VkApi/Vk.Base/Vk.Base.csproj": {
+                "projectPath": "/Users/zorbeycelik/Documents/Patika.Dev/VkApi/Vk.Base/Vk.Base.csproj"
               }
             }
           }

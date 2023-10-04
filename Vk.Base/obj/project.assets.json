@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/zorbeycelik/Documents/Patika.Dev/VkApi_KendiProjem/Vk.Base/Vk.Base.csproj",
+      "projectUniqueName": "/Users/zorbeycelik/Documents/Patika.Dev/VkApi/Vk.Base/Vk.Base.csproj",
       "projectName": "Vk.Base",
-      "projectPath": "/Users/zorbeycelik/Documents/Patika.Dev/VkApi_KendiProjem/Vk.Base/Vk.Base.csproj",
+      "projectPath": "/Users/zorbeycelik/Documents/Patika.Dev/VkApi/Vk.Base/Vk.Base.csproj",
       "packagesPath": "/Users/zorbeycelik/.nuget/packages/",
-      "outputPath": "/Users/zorbeycelik/Documents/Patika.Dev/VkApi_KendiProjem/Vk.Base/obj/",
+      "outputPath": "/Users/zorbeycelik/Documents/Patika.Dev/VkApi/Vk.Base/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/zorbeycelik/.nuget/NuGet/NuGet.Config"

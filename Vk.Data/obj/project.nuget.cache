@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bqzWlNhygkS+0q0nGHhG2RNRpc1N6RlpjNrWjQmjp9pg+bLd+EO0UoAgtS87oRMEjia7/JMf9fk3DjVBPIgJnQ==",
+  "dgSpecHash": "akcVwIZXTrol14iGx9rBgsqBRRNklIuQaVyEZVQqSygl6Zhf7JFKSfsoF9L128GJwCkbWyEtCNE7I8oLt4H6lg==",
   "success": true,
-  "projectFilePath": "/Users/zorbeycelik/Documents/Patika.Dev/VkApi_KendiProjem/Vk.Data/Vk.Data.csproj",
+  "projectFilePath": "/Users/zorbeycelik/Documents/Patika.Dev/VkApi/Vk.Data/Vk.Data.csproj",
   "expectedPackageFiles": [
     "/Users/zorbeycelik/.nuget/packages/azure.core/1.25.0/azure.core.1.25.0.nupkg.sha512",
     "/Users/zorbeycelik/.nuget/packages/azure.identity/1.7.0/azure.identity.1.7.0.nupkg.sha512",
