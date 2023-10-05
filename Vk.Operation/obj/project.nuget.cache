@@ -1,18 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "h1qj6bMSWPFt6KNqWcSi3jUAapO3Af+BvnM2g/Xu45bVFIldl+z4ndKMStPR7O2tMeiMkzILwxocmpmWAlD+zg==",
+  "dgSpecHash": "YGowkz9A/fLLq6B3fpOosuu6jgFGZEz7k/DFy5I4s07SlLfkk2EDjR8TXtYIRchL8KSuJAV5wLLZ3E5aWegplQ==",
   "success": true,
   "projectFilePath": "/Users/zorbeycelik/Documents/Patika.Dev/VkApi/Vk.Operation/Vk.Operation.csproj",
   "expectedPackageFiles": [
-    "/Users/zorbeycelik/.nuget/packages/automapper/12.0.1/automapper.12.0.1.nupkg.sha512",
+    "/Users/zorbeycelik/.nuget/packages/automapper/12.0.0/automapper.12.0.0.nupkg.sha512",
     "/Users/zorbeycelik/.nuget/packages/azure.core/1.25.0/azure.core.1.25.0.nupkg.sha512",
     "/Users/zorbeycelik/.nuget/packages/azure.identity/1.7.0/azure.identity.1.7.0.nupkg.sha512",
     "/Users/zorbeycelik/.nuget/packages/fluentvalidation/11.7.1/fluentvalidation.11.7.1.nupkg.sha512",
     "/Users/zorbeycelik/.nuget/packages/fluentvalidation.aspnetcore/11.3.0/fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
     "/Users/zorbeycelik/.nuget/packages/fluentvalidation.dependencyinjectionextensions/11.5.1/fluentvalidation.dependencyinjectionextensions.11.5.1.nupkg.sha512",
-    "/Users/zorbeycelik/.nuget/packages/mediatr/12.1.1/mediatr.12.1.1.nupkg.sha512",
-    "/Users/zorbeycelik/.nuget/packages/mediatr.contracts/2.0.1/mediatr.contracts.2.0.1.nupkg.sha512",
-    "/Users/zorbeycelik/.nuget/packages/mediatr.extensions.microsoft.dependencyinjection/11.1.0/mediatr.extensions.microsoft.dependencyinjection.11.1.0.nupkg.sha512",
+    "/Users/zorbeycelik/.nuget/packages/mediatr/9.0.0/mediatr.9.0.0.nupkg.sha512",
+    "/Users/zorbeycelik/.nuget/packages/mediatr.extensions.microsoft.dependencyinjection/9.0.0/mediatr.extensions.microsoft.dependencyinjection.9.0.0.nupkg.sha512",
     "/Users/zorbeycelik/.nuget/packages/microsoft.bcl.asyncinterfaces/1.1.1/microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "/Users/zorbeycelik/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
     "/Users/zorbeycelik/.nuget/packages/microsoft.data.sqlclient/5.1.1/microsoft.data.sqlclient.5.1.1.nupkg.sha512",
@@ -66,16 +65,5 @@
     "/Users/zorbeycelik/.nuget/packages/system.threading.tasks.extensions/4.5.4/system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "/Users/zorbeycelik/.nuget/packages/system.windows.extensions/6.0.0/system.windows.extensions.6.0.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1608",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Detected package version outside of dependency constraint: MediatR.Extensions.Microsoft.DependencyInjection 11.1.0 requires MediatR (>= 11.0.0 && < 12.0.0) but version MediatR 12.1.1 was resolved.",
-      "libraryId": "MediatR",
-      "targetGraphs": [
-        "net7.0"
-      ]
-    }
-  ]
+  "logs": []
 }

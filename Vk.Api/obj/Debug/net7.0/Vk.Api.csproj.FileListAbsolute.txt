@@ -153,3 +153,13 @@
 /Users/zorbeycelik/Documents/Patika.Dev/VkApi/Vk.Api/bin/Debug/net7.0/Microsoft.Extensions.DependencyModel.dll
 /Users/zorbeycelik/Documents/Patika.Dev/VkApi/Vk.Api/bin/Debug/net7.0/Mono.TextTemplating.dll
 /Users/zorbeycelik/Documents/Patika.Dev/VkApi/Vk.Api/bin/Debug/net7.0/System.CodeDom.dll
+/Users/zorbeycelik/Documents/Patika.Dev/VkApi/Vk.Api/bin/Debug/net7.0/AutoMapper.dll
+/Users/zorbeycelik/Documents/Patika.Dev/VkApi/Vk.Api/bin/Debug/net7.0/FluentValidation.dll
+/Users/zorbeycelik/Documents/Patika.Dev/VkApi/Vk.Api/bin/Debug/net7.0/FluentValidation.AspNetCore.dll
+/Users/zorbeycelik/Documents/Patika.Dev/VkApi/Vk.Api/bin/Debug/net7.0/FluentValidation.DependencyInjectionExtensions.dll
+/Users/zorbeycelik/Documents/Patika.Dev/VkApi/Vk.Api/bin/Debug/net7.0/MediatR.dll
+/Users/zorbeycelik/Documents/Patika.Dev/VkApi/Vk.Api/bin/Debug/net7.0/MediatR.Extensions.Microsoft.DependencyInjection.dll
+/Users/zorbeycelik/Documents/Patika.Dev/VkApi/Vk.Api/bin/Debug/net7.0/Vk.Operation.dll
+/Users/zorbeycelik/Documents/Patika.Dev/VkApi/Vk.Api/bin/Debug/net7.0/Vk.Schema.dll
+/Users/zorbeycelik/Documents/Patika.Dev/VkApi/Vk.Api/bin/Debug/net7.0/Vk.Operation.pdb
+/Users/zorbeycelik/Documents/Patika.Dev/VkApi/Vk.Api/bin/Debug/net7.0/Vk.Schema.pdb
