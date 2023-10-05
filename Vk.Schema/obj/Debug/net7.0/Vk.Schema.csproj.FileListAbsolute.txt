@@ -1,0 +1,11 @@
+/Users/zorbeycelik/Documents/Patika.Dev/VkApi/Vk.Schema/bin/Debug/net7.0/Vk.Schema.deps.json
+/Users/zorbeycelik/Documents/Patika.Dev/VkApi/Vk.Schema/bin/Debug/net7.0/Vk.Schema.dll
+/Users/zorbeycelik/Documents/Patika.Dev/VkApi/Vk.Schema/bin/Debug/net7.0/Vk.Schema.pdb
+/Users/zorbeycelik/Documents/Patika.Dev/VkApi/Vk.Schema/obj/Debug/net7.0/Vk.Schema.GeneratedMSBuildEditorConfig.editorconfig
+/Users/zorbeycelik/Documents/Patika.Dev/VkApi/Vk.Schema/obj/Debug/net7.0/Vk.Schema.AssemblyInfoInputs.cache
+/Users/zorbeycelik/Documents/Patika.Dev/VkApi/Vk.Schema/obj/Debug/net7.0/Vk.Schema.AssemblyInfo.cs
+/Users/zorbeycelik/Documents/Patika.Dev/VkApi/Vk.Schema/obj/Debug/net7.0/Vk.Schema.csproj.CoreCompileInputs.cache
+/Users/zorbeycelik/Documents/Patika.Dev/VkApi/Vk.Schema/obj/Debug/net7.0/Vk.Schema.dll
+/Users/zorbeycelik/Documents/Patika.Dev/VkApi/Vk.Schema/obj/Debug/net7.0/refint/Vk.Schema.dll
+/Users/zorbeycelik/Documents/Patika.Dev/VkApi/Vk.Schema/obj/Debug/net7.0/Vk.Schema.pdb
+/Users/zorbeycelik/Documents/Patika.Dev/VkApi/Vk.Schema/obj/Debug/net7.0/ref/Vk.Schema.dll
