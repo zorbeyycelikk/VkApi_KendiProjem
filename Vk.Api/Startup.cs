@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using Vk.Data.Context;
+using Vk.Data.Uow;
 
 namespace VkApi;
 
@@ -20,6 +21,7 @@ public class Startup
         // Database için bağlantı kodları
         string connection = Configuration.GetConnectionString("MsSqlConnection");
         services.AddDbContext<VkDbContext>(opts => opts.UseSqlServer(connection));
+        services.AddScoped<IUnitOfWork, UnitOfWork>();
 
         services.AddControllers();
         services.AddSwaggerGen(c =>
