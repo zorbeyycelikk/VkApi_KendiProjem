@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Vk.Data.Domain;
 using Vk.Data.Uow;
 
-namespace VkApi.Properties.Controllers;
+namespace VkApi.Controllers;
 
 [Route("vk/api/v1/[controller]")]
 [ApiController]

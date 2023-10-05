@@ -1,3 +1,4 @@
+using System.Linq.Expressions;
 using Microsoft.EntityFrameworkCore;
 using Vk.Base.Model;
 using Vk.Data.Context;
@@ -21,6 +22,15 @@ public class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEnt
     }
     
     // List By Id
+    public async Task<TEntity> GetByIdAsync(int id, CancellationToken cancellationToken, params string[] includes)
+    {
+        var query = dbContext.Set<TEntity>().AsQueryable();
+        if (includes.Any())
+        {
+            query = includes.Aggregate(query, (current, incl) => current.Include(incl));
+        }
+        return await query.FirstOrDefaultAsync(x=>x.Id == id,cancellationToken);    }
+    
     public TEntity GetById(int id)
     {
         return dbContext.Set<TEntity>().Find(id);
@@ -83,7 +93,7 @@ public class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEnt
         dbContext.Set<TEntity>().AddRange(entities);    }
 
     
-    public IQueryable<TEntity> GetAsQueryable()
+    public IQueryable<TEntity> GetAsQueryable(params string [] includes)
     {
         /*
         IEnumerable<Order> orders = orderRepo.GetAll();
@@ -93,6 +103,27 @@ public class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEnt
         IQueryable<Order> filteredOrdersQuery = ordersQuery.Where(o => o.CustomerId == 3);
         
         */
-        return dbContext.Set<TEntity>().AsQueryable();
+        
+        var query = dbContext.Set<TEntity>().AsQueryable();
+        if (includes.Any())
+        {
+            query = includes.Aggregate(query, (current, incl) => current.Include(incl));
+        }
+
+        return query;
+        
+        // return dbContext.Set<TEntity>().AsQueryable();
+    }
+
+    public IEnumerable<TEntity> Where(Expression<Func<TEntity, bool>> expression, params string[] includes)
+    {
+        var query = dbContext.Set<TEntity>().AsQueryable();
+        query.Where(expression);
+        if (includes.Any())
+        {
+            query = includes.Aggregate(query, (current, incl) => current.Include(incl));
+        }
+
+        return query.ToList();
     }
 }
