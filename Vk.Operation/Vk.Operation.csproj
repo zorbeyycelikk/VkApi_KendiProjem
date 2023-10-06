@@ -7,10 +7,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="Command\" />
-    </ItemGroup>
-
-    <ItemGroup>
       <ProjectReference Include="..\Vk.Base\Vk.Base.csproj" />
       <ProjectReference Include="..\Vk.Data\Vk.Data.csproj" />
       <ProjectReference Include="..\Vk.Schema\Vk.Schema.csproj" />
