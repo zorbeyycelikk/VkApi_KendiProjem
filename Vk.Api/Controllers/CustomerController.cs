@@ -8,11 +8,11 @@ namespace VkApi.Controllers;
 
 [Route("vk/api/v1/[controller]")]
 [ApiController]
-public class CqrsDenemeController : ControllerBase
+public class CustomerController : ControllerBase
 {
     private IMediator mediator;
 
-    public CqrsDenemeController(IMediator mediator) 
+    public CustomerController(IMediator mediator) 
     {
         this.mediator = mediator;
     }
