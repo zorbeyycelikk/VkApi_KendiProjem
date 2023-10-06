@@ -25,6 +25,7 @@ public class MapperConfig : Profile
             .ForMember(dest => dest.CustomerName,
                 opt => opt.MapFrom(src => src.Customer.FirstName + " " + src.Customer.LastName));
 
+        // Card İçin Mapper İşlemi
         CreateMap<CardRequest, Card>();
         CreateMap<Card, CardResponse>()
             .ForMember(dest => dest.AccountName, opt => opt.MapFrom(src => src.Account.Name))
