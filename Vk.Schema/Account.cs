@@ -24,4 +24,7 @@ public class AccountResponse
     public string IBAN { get; set; }
     public decimal Balance { get; set; }
     public string CurrencyCode { get; set; }
+    
+    public virtual List<EftTransactionResponse> EftTransactions { get; set; }
+    public virtual List<AccountTransactionResponse> AccountTransactions { get; set; }
 }

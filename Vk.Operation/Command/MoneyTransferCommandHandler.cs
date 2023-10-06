@@ -10,30 +10,26 @@ using Vk.Schema;
 
 namespace Vk.Operation.Command;
 
-public class EftTransactionCommandHandler:
-    IRequestHandler<CreateEftTransactionCommand, ApiResponse<EftTransactionResponse>>,
-    IRequestHandler<DeleteEftTransactionCommand, ApiResponse >,
-    IRequestHandler<UpdateEftTransactionCommand, ApiResponse >,
-    IRequestHandler<CreateEftTransaction, ApiResponse<EftTransactionResponse>>
-
+public class MoneyTransferCommandHandler :
+    IRequestHandler<CreateMoneyTransfer, ApiResponse<MoneyTransferResponse>>
 {
-    private readonly IMapper mapper;
     private readonly VkDbContext dbContext;
-    
-    public EftTransactionCommandHandler(IMapper mapper , VkDbContext dbContext)
+    private readonly IMapper mapper;
+
+    public MoneyTransferCommandHandler(VkDbContext dbContext, IMapper mapper)
     {
         this.dbContext = dbContext;
         this.mapper = mapper;
     }
 
 
-public async Task<ApiResponse<EftTransactionResponse>> Handle(CreateEftTransaction request,
+    public async Task<ApiResponse<MoneyTransferResponse>> Handle(CreateMoneyTransfer request,
         CancellationToken cancellationToken)
     {
 
         if (request.Model.FromAccountId == request.Model.ToAccountId)
         {
-            return new ApiResponse<EftTransactionResponse>("Accounts cannot be same");
+            return new ApiResponse<MoneyTransferResponse>("Accounts cannot be same");
         }
 
         string refNumber = Guid.NewGuid().ToString().Replace("-", "").ToLower();
@@ -42,11 +38,11 @@ public async Task<ApiResponse<EftTransactionResponse>> Handle(CreateEftTransacti
         var checkToAccount = await CheckAccount(request.Model.ToAccountId, cancellationToken); 
         if (!checkFromAccount.Success)
         {
-            return new ApiResponse<EftTransactionResponse>(checkFromAccount.Message);
+            return new ApiResponse<MoneyTransferResponse>(checkFromAccount.Message);
         }
         if (!checkToAccount.Success)
         {
-            return new ApiResponse<EftTransactionResponse>(checkToAccount.Message);
+            return new ApiResponse<MoneyTransferResponse>(checkToAccount.Message);
         }
 
         var balanceFrom = await BalanceOperation(request.Model.FromAccountId, request.Model.Amount,
@@ -56,11 +52,11 @@ public async Task<ApiResponse<EftTransactionResponse>> Handle(CreateEftTransacti
        
         if (!balanceFrom.Success)
         {
-            return new ApiResponse<EftTransactionResponse>(balanceFrom.Message);
+            return new ApiResponse<MoneyTransferResponse>(balanceFrom.Message);
         }
         if (!balanceTo.Success)
         {
-            return new ApiResponse<EftTransactionResponse>(balanceTo.Message);
+            return new ApiResponse<MoneyTransferResponse>(balanceTo.Message);
         }
 
         Account from = checkFromAccount.Response;
@@ -92,12 +88,12 @@ public async Task<ApiResponse<EftTransactionResponse>> Handle(CreateEftTransacti
         await dbContext.SaveChangesAsync(cancellationToken);
 
 
-        var response = mapper.Map<EftTransactionResponse>(request.Model);
+        var response = mapper.Map<MoneyTransferResponse>(request.Model);
         response.ReferenceNumber = refNumber;
         response.TransactionCode = txnCode;
         response.TransactionDate = DateTime.UtcNow;
 
-        return new ApiResponse<EftTransactionResponse>(response);
+        return new ApiResponse<MoneyTransferResponse>(response);
     }
 
     private async Task<ApiResponse<Account>> CheckAccount(int accountId, CancellationToken cancellationToken)
@@ -137,44 +133,5 @@ public async Task<ApiResponse<EftTransactionResponse>> Handle(CreateEftTransacti
         await dbContext.SaveChangesAsync(cancellationToken);
         return new ApiResponse();
     }
-
-
-    public async Task<ApiResponse<EftTransactionResponse>> Handle(CreateEftTransactionCommand request, CancellationToken cancellationToken)
-    {
-        EftTransaction mapped = mapper.Map<EftTransaction>(request.Model);
-        var entity = await dbContext.Set<EftTransaction>().AddAsync(mapped,cancellationToken);
-        await dbContext.SaveChangesAsync(cancellationToken);
-
-        var response = mapper.Map<EftTransactionResponse>(entity.Entity); // MAPPED OLMAZ MI ?
-        return new ApiResponse<EftTransactionResponse>(response);
-
-    }
-
-    public async Task<ApiResponse> Handle(DeleteEftTransactionCommand request, CancellationToken cancellationToken)
-    {
-        EftTransaction entity = await dbContext.Set<EftTransaction>().FirstOrDefaultAsync(x => x.Id == request.Id);
-        
-        if (entity == null)
-        {
-            return new ApiResponse("Record not found!");
-        }
-        
-        entity.IsActive = false;
-        await dbContext.SaveChangesAsync(cancellationToken);
-        return new ApiResponse();
-    }
-
-    public async Task<ApiResponse> Handle(UpdateEftTransactionCommand request, CancellationToken cancellationToken)
-    {
-        var entity = await dbContext.Set<EftTransaction>().FirstOrDefaultAsync(x => x.Id == request.Id, cancellationToken);
-        if (entity == null)
-        {
-            return new ApiResponse("Record not found!");
-        }
-
-        entity.Description = request.Model.Description;
-        
-        await dbContext.SaveChangesAsync(cancellationToken);
-        return new ApiResponse();
-    }
+    
 }

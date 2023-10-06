@@ -36,9 +36,17 @@ public class EftTransactionController : ControllerBase
     }
 
     [HttpPost]
-    public async Task<ApiResponse<EftTransactionResponse>> Post([FromBody] EftTransactionRequest request)
+    public async Task<ApiResponse<EftTransactionResponse>> Post01([FromBody] EftTransactionRequest request)
     {
         var operation = new CreateEftTransactionCommand(request);
+        var result = await mediator.Send(operation);
+        return result;
+    }
+    
+    [HttpPost("ByMoneyTransfer/")]
+    public async Task<ApiResponse<EftTransactionResponse>> Post02([FromBody] EftTransactionRequest request)
+    {
+        var operation = new CreateEftTransaction(request);
         var result = await mediator.Send(operation);
         return result;
     }
