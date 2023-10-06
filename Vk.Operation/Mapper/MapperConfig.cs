@@ -29,7 +29,8 @@ public class MapperConfig : Profile
         CreateMap<Card, CardResponse>()
             .ForMember(dest => dest.AccountName, opt => opt.MapFrom(src => src.Account.Name))
             .ForMember(dest => dest.AccountNumber, opt => opt.MapFrom(src => src.Account.AccountNumber));
-
+        
+        // Address İçin Mapper İşlemi
         CreateMap<AddressRequest, Address>();
         CreateMap<Address, AddressResponse>()
             .ForMember(dest => dest.CustomerName,
