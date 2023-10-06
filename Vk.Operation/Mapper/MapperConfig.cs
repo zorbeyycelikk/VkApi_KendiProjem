@@ -37,6 +37,7 @@ public class MapperConfig : Profile
             .ForMember(dest => dest.CustomerName,
                 opt => opt.MapFrom(src => src.Customer.FirstName + " " + src.Customer.LastName));
 
+        // EftTranstaction İçin Mapper İşlemi
         CreateMap<EftTransactionRequest, EftTransaction>();
         CreateMap<EftTransaction, EftTransactionResponse>()
             .ForMember(dest => dest.AccountName, opt => opt.MapFrom(src => src.Account.Name))

@@ -18,6 +18,6 @@ public class CardResponse
     public string Cvv { get; set; } // nnn
     public string ExpiryDate { get; set; } // DDyy
     public int? ExpenseLimit { get; set; }
-    public string AccountName { get; set; }
-    public int AccountNumber { get; set; }
+    public string AccountName { get; set; } // Account'tan gelecek
+    public int AccountNumber { get; set; } // Account'tan gelecek
 }
