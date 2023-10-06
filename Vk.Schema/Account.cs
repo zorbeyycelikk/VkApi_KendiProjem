@@ -10,7 +10,6 @@ public class AccountRequest
     public string CurrencyCode { get; set; }
     public DateTime OpenDate { get; set; }
     public DateTime? CloseDate { get; set; }
-
     public int? CardId { get; set; }
 }
 
