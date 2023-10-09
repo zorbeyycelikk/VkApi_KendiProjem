@@ -18,5 +18,5 @@ public class AddressResponse
     public string City { get; set; }
     public string County { get; set; }
     public string PostalCode { get; set; }
-    public string CustomerName { get; set; } // Customer 'dan gelecek. FirstName+ LastName
+    public string CustomerName { get; set; }
 }

@@ -4,44 +4,48 @@ using Microsoft.EntityFrameworkCore;
 using Vk.Base.Response;
 using Vk.Data.Context;
 using Vk.Data.Domain;
-using Vk.Operation.Cqrs;
 using Vk.Schema;
 
-namespace Vk.Operation.Query;
+namespace Vk.Operation;
 
 public class EftTransactionQueryHandler :
     IRequestHandler<GetAllEftTransactionQuery, ApiResponse<List<EftTransactionResponse>>>,
     IRequestHandler<GetEftTransactionByIdQuery, ApiResponse<EftTransactionResponse>>
 {
-    private readonly IMapper mapper;
     private readonly VkDbContext dbContext;
+    private readonly IMapper mapper;
 
-    public EftTransactionQueryHandler(IMapper mapper , VkDbContext dbContext)
+    public EftTransactionQueryHandler(VkDbContext dbContext, IMapper mapper)
     {
-        this.mapper = mapper;
         this.dbContext = dbContext;
+        this.mapper = mapper;
     }
-    
-    public async Task<ApiResponse<List<EftTransactionResponse>>> Handle(GetAllEftTransactionQuery request, CancellationToken cancellationToken)
+
+
+    public async Task<ApiResponse<List<EftTransactionResponse>>> Handle(GetAllEftTransactionQuery request,
+        CancellationToken cancellationToken)
     {
-        var entity = await dbContext.Set<EftTransaction>()
-            .Include((x =>x.Account))//AccountName ve AccountNumber buradan gelecek
+        List<EftTransaction> list = await dbContext.Set<EftTransaction>()
+            .Include(x => x.Account)
             .ToListAsync(cancellationToken);
-
-        List<EftTransactionResponse> mapped = mapper.Map<List<EftTransactionResponse>>(entity);
-        return new ApiResponse<List<EftTransactionResponse>>(mapped);
         
+        List<EftTransactionResponse> mapped = mapper.Map<List<EftTransactionResponse>>(list);
+        return new ApiResponse<List<EftTransactionResponse>>(mapped);
     }
 
-    public async Task<ApiResponse<EftTransactionResponse>> Handle(GetEftTransactionByIdQuery request, CancellationToken cancellationToken)
+    public async Task<ApiResponse<EftTransactionResponse>> Handle(GetEftTransactionByIdQuery request,
+        CancellationToken cancellationToken)
     {
-        var entity = await dbContext.Set<EftTransaction>()
-            .Include((x =>x.Account))//AccountName ve AccountNumber buradan gelecek
-            .FirstOrDefaultAsync(x => x.Id == request.Id , cancellationToken);
+        EftTransaction? entity = await dbContext.Set<EftTransaction>()
+            .Include(x => x.Account)
+            .FirstOrDefaultAsync(x => x.Id == request.Id,cancellationToken);
+        
         if (entity == null)
         {
             return new ApiResponse<EftTransactionResponse>("Record not found!");
         }
+        
         EftTransactionResponse mapped = mapper.Map<EftTransactionResponse>(entity);
-        return new ApiResponse<EftTransactionResponse>(mapped);    }
+        return new ApiResponse<EftTransactionResponse>(mapped);
+    }
 }

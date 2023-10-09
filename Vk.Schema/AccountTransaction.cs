@@ -1,5 +1,6 @@
 namespace Vk.Schema;
 
+
 public class AccountTransactionRequest
 {
     public int AccountId { get; set; }
@@ -20,8 +21,8 @@ public class AccountTransactionResponse
     public string Description { get; set; }
     public DateTime TransactionDate { get; set; }
     public string TransactionCode { get; set; }
-    public string AccountName { get; set; } // Account'tan gelecek
-    public int AccountNumber { get; set; } // Account'tan gelecek
-    public int CustomerNumber { get; set; } // Account.Customer'dan gelecek
-    public string CustomerName { get; set; } // Account.Customer'dan gelecek
+    public string AccountName { get; set; }
+    public int AccountNumber { get; set; }
+    public int CustomerNumber { get; set; }
+    public string CustomerName { get; set; }
 }

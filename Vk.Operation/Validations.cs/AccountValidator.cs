@@ -1,22 +1,13 @@
 using FluentValidation;
 using Vk.Schema;
 
-namespace Vk.Operation.Validations.cs;
+namespace Vk.Operation.Validation;
 
 public class CreateAccountValidator : AbstractValidator<AccountRequest>
 {
     public CreateAccountValidator()
     {
-        // Name
         RuleFor(x => x.Name).NotEmpty().WithMessage("Name is required.");
-        
-        // AccountNumber
-        RuleFor(x => x.AccountNumber).NotEmpty().WithMessage("AccountNumber is required.");
-
-        // IBAN
-        RuleFor(x => x.IBAN).NotEmpty().WithMessage("IBAN is required.");
-
-        // CurrencyCode
-        RuleFor(x => x.CurrencyCode).NotEmpty().WithMessage("CurrencyCode is required.");
+        RuleFor(x => x.Name).MinimumLength(20).WithMessage("Name length min value is 20.");
     }
 }

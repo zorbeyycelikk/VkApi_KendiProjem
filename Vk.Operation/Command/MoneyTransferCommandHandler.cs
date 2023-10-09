@@ -5,13 +5,12 @@ using Vk.Base.Response;
 using Vk.Base.Transaction;
 using Vk.Data.Context;
 using Vk.Data.Domain;
-using Vk.Operation.Cqrs;
 using Vk.Schema;
 
 namespace Vk.Operation.Command;
 
 public class MoneyTransferCommandHandler :
-    IRequestHandler<CreateMoneyTransfer, ApiResponse<MoneyTransferResponse>>
+    IRequestHandler<CreateMoneyTransferCommand, ApiResponse<MoneyTransferResponse>>
 {
     private readonly VkDbContext dbContext;
     private readonly IMapper mapper;
@@ -23,7 +22,7 @@ public class MoneyTransferCommandHandler :
     }
 
 
-    public async Task<ApiResponse<MoneyTransferResponse>> Handle(CreateMoneyTransfer request,
+    public async Task<ApiResponse<MoneyTransferResponse>> Handle(CreateMoneyTransferCommand request,
         CancellationToken cancellationToken)
     {
 

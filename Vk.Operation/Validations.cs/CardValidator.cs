@@ -1,23 +1,18 @@
 using FluentValidation;
 using Vk.Schema;
 
-namespace Vk.Operation.Validations.cs;
+namespace Vk.Operation.Validation;
 
-public class CreateCardValidator  : AbstractValidator<CardRequest>
+public class CreateCardValidator : AbstractValidator<CardRequest>
 {
-    
-    public CreateCardValidator()
-    { 
-        // CardHolder
-        RuleFor(x => x.CardHolder).NotEmpty().WithMessage("CardHolder is required.");
-        RuleFor(x => x.CardHolder).MinimumLength(5).WithMessage("CardHolder length min value is 5.");
 
-        // CardNumber
-        RuleFor(x => x.CardNumber).NotEmpty().WithMessage("CardNumber is required.");
-        
-        // Cvv
-        RuleFor(x => x.Cvv)
-            .NotEmpty().WithMessage("CVV is required.")
-            .MaximumLength(3).WithMessage("CVV en fazla 3 karakter içermelidir.");
+    public CreateCardValidator()
+    {
+        RuleFor(x => x.AccountId).NotEmpty();
+        RuleFor(x => x.CardHolder).NotEmpty();
+        RuleFor(x => x.CardNumber).NotEmpty();
+        RuleFor(x => x.Cvv).NotEmpty();
+        RuleFor(x => x.ExpiryDate).NotEmpty();
+        RuleFor(x => x.ExpenseLimit).NotEmpty();
     }
 }
