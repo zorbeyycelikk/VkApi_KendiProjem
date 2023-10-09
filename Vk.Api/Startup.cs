@@ -7,6 +7,7 @@ using Vk.Data.Context;
 using Vk.Data.Uow;
 using Vk.Operation.Cqrs;
 using Vk.Operation.Mapper;
+using VkApi.Middleware;
 
 namespace VkApi;
 
@@ -51,6 +52,8 @@ public class Startup
             app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Vk.Api v1"));
         }
 
+        app.UseMiddleware<HeartBeatMiddleware>();
+        
         app.UseHttpsRedirection();
 
         app.UseRouting();
