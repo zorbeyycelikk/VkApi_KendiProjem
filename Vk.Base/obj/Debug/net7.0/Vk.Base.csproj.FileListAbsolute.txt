@@ -20,3 +20,4 @@
 /Users/zorbeycelik/Documents/Patika.Dev/VkApi/Vk.Base/obj/Debug/net7.0/refint/Vk.Base.dll
 /Users/zorbeycelik/Documents/Patika.Dev/VkApi/Vk.Base/obj/Debug/net7.0/Vk.Base.pdb
 /Users/zorbeycelik/Documents/Patika.Dev/VkApi/Vk.Base/obj/Debug/net7.0/ref/Vk.Base.dll
+/Users/zorbeycelik/Documents/Patika.Dev/VkApi/Vk.Base/obj/Debug/net7.0/Vk.Base.csproj.AssemblyReference.cache

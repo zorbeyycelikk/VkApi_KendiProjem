@@ -23,7 +23,7 @@ public class HeartBeatMiddleware
             context.Response.StatusCode = 200;
             return;
         }
-        
+        //Bunu yazmazsak api'ye dönmez.Root yazılan api'ye gider.Bir nevi blocklanma durumu söz konusu olur
         await next.Invoke(context);
     }
 }
