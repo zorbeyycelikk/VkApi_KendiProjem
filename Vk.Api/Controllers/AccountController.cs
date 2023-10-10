@@ -1,4 +1,5 @@
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Vk.Base.Response;
 using Vk.Operation.Cqrs;
@@ -19,6 +20,7 @@ public class AccountController : ControllerBase
 
 
     [HttpGet]
+    [Authorize(Roles = "admin")]
     public async Task<ApiResponse<List<AccountResponse>>> GetAll()
     {
         var operation = new GetAllAccountQuery();
@@ -27,6 +29,7 @@ public class AccountController : ControllerBase
     }
 
     [HttpGet("{id}")]
+    [Authorize(Roles = "admin")]
     public async Task<ApiResponse<AccountResponse>> Get(int id)
     {
         var operation = new GetAccountByIdQuery(id);
@@ -35,6 +38,7 @@ public class AccountController : ControllerBase
     }
 
     [HttpPost]
+    [Authorize(Roles = "admin")]
     public async Task<ApiResponse<AccountResponse>> Post([FromBody] AccountRequest request)
     {
         var operation = new CreateAccountCommand(request);
@@ -43,6 +47,7 @@ public class AccountController : ControllerBase
     }
 
     [HttpPut("{id}")]
+    [Authorize(Roles = "admin")]
     public async Task<ApiResponse> Put(int id, [FromBody] AccountRequest request)
     {
         var operation = new UpdateAccountCommand(request, id);
@@ -51,6 +56,7 @@ public class AccountController : ControllerBase
     }
 
     [HttpDelete("{id}")]
+    [Authorize(Roles = "admin")]
     public async Task<ApiResponse> Delete(int id)
     {
         var operation = new DeleteAccountCommand(id);

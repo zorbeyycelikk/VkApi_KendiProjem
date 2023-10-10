@@ -1,4 +1,5 @@
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Vk.Base.Response;
 using Vk.Operation.Cqrs;
@@ -20,6 +21,7 @@ public class CardController : ControllerBase
 
 
     [HttpGet]
+    [Authorize(Roles = "admin")]
     public async Task<ApiResponse<List<CardResponse>>> GetAll()
     {
         var operation = new GetAllCardQuery();
@@ -28,6 +30,7 @@ public class CardController : ControllerBase
     }
 
     [HttpGet("{id}")]
+    [Authorize(Roles = "admin")]
     public async Task<ApiResponse<CardResponse>> Get(int id)
     {
         var operation = new GetCardByIdQuery(id);
@@ -36,6 +39,7 @@ public class CardController : ControllerBase
     }
 
     [HttpPost]
+    [Authorize(Roles = "admin")]
     public async Task<ApiResponse<CardResponse>> Post([FromBody] CardRequest request)
     {
         var operation = new CreateCardCommand(request);
@@ -44,6 +48,7 @@ public class CardController : ControllerBase
     }
 
     [HttpPut("{id}")]
+    [Authorize(Roles = "admin")]
     public async Task<ApiResponse> Put(int id, [FromBody] CardRequest request)
     {
         var operation = new UpdateCardCommand(request, id);
@@ -52,6 +57,7 @@ public class CardController : ControllerBase
     }
 
     [HttpDelete("{id}")]
+    [Authorize(Roles = "admin")]
     public async Task<ApiResponse> Delete(int id)
     {
         var operation = new DeleteCardCommand(id);

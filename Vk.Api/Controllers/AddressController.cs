@@ -1,4 +1,5 @@
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Vk.Base.Response;
 using Vk.Operation.Cqrs;
@@ -20,6 +21,7 @@ public class AddressController : ControllerBase
 
 
     [HttpGet]
+    [Authorize(Roles = "admin")]
     public async Task<ApiResponse<List<AddressResponse>>> GetAll()
     {
         var operation = new GetAllAddressQuery();
@@ -28,6 +30,7 @@ public class AddressController : ControllerBase
     }
 
     [HttpGet("{id}")]
+    [Authorize(Roles = "admin")]
     public async Task<ApiResponse<AddressResponse>> Get(int id)
     {
         var operation = new GetAddressByIdQuery(id);
@@ -36,6 +39,7 @@ public class AddressController : ControllerBase
     }
 
     [HttpPost]
+    [Authorize(Roles = "admin")]
     public async Task<ApiResponse<AddressResponse>> Post([FromBody] AddressRequest request)
     {
         var operation = new CreateAddressCommand(request);
@@ -44,6 +48,7 @@ public class AddressController : ControllerBase
     }
 
     [HttpPut("{id}")]
+    [Authorize(Roles = "admin")]
     public async Task<ApiResponse> Put(int id, [FromBody] AddressRequest request)
     {
         var operation = new UpdateAddressCommand(request, id);
@@ -52,6 +57,7 @@ public class AddressController : ControllerBase
     }
 
     [HttpDelete("{id}")]
+    [Authorize(Roles = "admin")]
     public async Task<ApiResponse> Delete(int id)
     {
         var operation = new DeleteAddressCommand(id);
