@@ -42,7 +42,7 @@ public class CustomerServiceController: ControllerBase
     
     [HttpGet("GetCustomerAccounts")]
     [Authorize(Roles = "admin")]
-    public async Task<ApiResponse<List<AccountResponse>>> GetSessionAccounts()
+    public async Task<ApiResponse<List<AccountResponse>>> GetSessionAccountsInfo()
     {
         var id = (User.Identity as ClaimsIdentity).FindFirst("Id").Value;
         var operation = new GetSessionAccountByIdQuery(int.Parse(id));
@@ -52,7 +52,7 @@ public class CustomerServiceController: ControllerBase
     
     [HttpGet("GetCustomerAccountTransactions")]
     [Authorize(Roles = "admin")]
-    public async Task<ApiResponse<List<AccountTransactionResponse>>> GetSessionAccountTransactions()
+    public async Task<ApiResponse<List<AccountTransactionResponse>>> GetSessionAccountTransactionsInfo()
     {
         var id = (User.Identity as ClaimsIdentity).FindFirst("Id").Value;
         var operation = new GetSessionAccountTransactionByIdQuery(int.Parse(id));
@@ -62,7 +62,7 @@ public class CustomerServiceController: ControllerBase
     
     [HttpGet("GetCustomerEftTransactions")]
     [Authorize(Roles = "admin")]
-    public async Task<ApiResponse<List<EftTransactionResponse>>> GetSessionEftTransactions()
+    public async Task<ApiResponse<List<EftTransactionResponse>>> GetSessionEftTransactionsInfo()
     {
         var id = (User.Identity as ClaimsIdentity).FindFirst("Id").Value;
         var operation = new GetSessionEftTransactionByIdQuery(int.Parse(id));
@@ -72,7 +72,7 @@ public class CustomerServiceController: ControllerBase
     
     [HttpGet("GetCustomerCard")]
     [Authorize(Roles = "admin")]
-    public async Task<ApiResponse<List<CardResponse>>> GetSessionCard()
+    public async Task<ApiResponse<List<CardResponse>>> GetSessionCardInfo()
     {
         var id = (User.Identity as ClaimsIdentity).FindFirst("Id").Value;
         var operation = new GetSessionCardByIdQuery(int.Parse(id));
